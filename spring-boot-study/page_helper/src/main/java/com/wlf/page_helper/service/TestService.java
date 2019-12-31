@@ -4,14 +4,14 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.wlf.page_helper.entity.Test;
 import com.wlf.page_helper.mapper.TestMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 @Service
 public class TestService {
 
-    @Autowired
+    @Resource
     private TestMapper testMapper;
 
 

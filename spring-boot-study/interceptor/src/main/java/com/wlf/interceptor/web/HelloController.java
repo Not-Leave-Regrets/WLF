@@ -1,6 +1,7 @@
 package com.wlf.interceptor.web;
 
 import com.wlf.interceptor.authen.access.Access;
+import com.wlf.interceptor.authen.access.Logger;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
@@ -23,9 +24,8 @@ public class HelloController {
     @Access(authorities = {"管理员"})
     @GetMapping("/authen")
     @ApiOperation("验证管理员才能访问")
+    @Logger(operations = "测试logger")
     public String authenId(String id ){
-
-
         return "success";
     }
 }

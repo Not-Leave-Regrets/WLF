@@ -9,8 +9,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 @Api
 public class UserController {
@@ -23,7 +21,7 @@ public class UserController {
     @ApiOperation("测试将值放入到redis中")
     public String putRedis(){
         try {
-            List<User> users = userMapper.selectAll();
+           User users = userMapper.selectByPrimaryKey("3");
             redisTemplate.opsForValue().set("users",users);
         } catch (Exception e) {
             e.printStackTrace();
