@@ -51,7 +51,7 @@ public class ThreadPoll {
                         }
                     }
                     r = tasks.removeLast();
-                    tasks.notifyAll();
+                    //tasks.notifyAll();
                 }
                 System.out.println(this.getName()+"获取到任务并执行");
                 r.run();
