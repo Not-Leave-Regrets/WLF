@@ -19,6 +19,7 @@ public class MyWebAppConfigurer extends WebMvcConfigurerAdapter{
         return new LoggerInterceptor();
     }
     //配置各个拦截器需要拦截的路径
+    //注册拦截器
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 //        registry.addInterceptor(new MyInterceptor1()).addPathPatterns("/**");

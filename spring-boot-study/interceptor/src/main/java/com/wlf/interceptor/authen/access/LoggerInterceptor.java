@@ -30,7 +30,7 @@ public class LoggerInterceptor implements HandlerInterceptor {
         // 从方法处理器中获取出要调用的方法
         Method method = handlerMethod.getMethod();
         // 获取出方法上的logger注解
-        Logger logger = method.getAnnotation(Logger.class);
+        Logger9 logger = method.getAnnotation(Logger9.class);
         if (logger == null) {
             // 如果注解为null, 说明不需要拦截, 直接放过
             return true;
